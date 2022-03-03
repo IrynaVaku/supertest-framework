@@ -16,6 +16,8 @@ class AuthHelper {
       //Save a response from server to result variable
       .then((res) => {
         this.response = res;
+        process.env.TOKEN = this.response.body.token;
+// this token was got after user login test and it's gonna be used in future tests(autosave) 
       });
   }
 }
