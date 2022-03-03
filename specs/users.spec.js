@@ -47,8 +47,9 @@ describe('Successful get all users)', () => {
 
 describe('Successful delete user)', () => {
   before(async () => {
-    //await usersHelper.create();
-    await usersHelper.delete(userID);
+    await usersHelper.create();
+    console.log(userID, 'new user');
+    await usersHelper.delete(usersHelper.response.body.id);
   });
   it('Checking that response status code is 200', () => {
     expect(usersHelper.response.statusCode).to.eq(200);
