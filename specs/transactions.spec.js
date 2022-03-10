@@ -5,11 +5,11 @@ import TransactionsHelper from '../helpers/transactions.helper';
 import {getRandomItem} from '../helpers/common.helper'
 const usersHelper = new UsersHelper();
 const transactionsHelper = new TransactionsHelper();
-describe('Main test suits for Transactions )', () => {
+describe('Main test suits for Transactions', () => {
   let senderID;
   let reseverID;
   let amount;
-describe('\nSuccessful create transaction )', () => {
+describe('\nSuccessful create transaction', () => {
   before(async () => {
     await usersHelper.getAll();
 //console.log(usersHelper.response.body);

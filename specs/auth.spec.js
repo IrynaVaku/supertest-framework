@@ -5,7 +5,7 @@ const authHelper = new AuthHelper();
 describe('\nSuccessful login sub suite (happy path with valid login and password)', () => {
   before(async () => {
     await authHelper.login(process.env.LOGIN, process.env.PASSWORD);
-    console.log(authHelper.response.body);
+    //console.log(authHelper.response.body);
     process.env['TOKEN'] = authHelper.response.body.token;
 
   });
@@ -20,7 +20,7 @@ describe('\nSuccessful login sub suite (happy path with valid login and password
   });
   it('Checking that TOKEN is the string', () => {
     expect(authHelper.response.body.token).to.be.an('string');
-console.log(authHelper.response.body.token);
+//console.log(authHelper.response.body.token);
   });
 });
 
